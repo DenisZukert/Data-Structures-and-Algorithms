@@ -168,6 +168,7 @@ console.log(sortedArray); // [2, 4, 5, 8, 9]
 ```bash
 
 git clone "https://github.com/DenisZukert/Data-Structures-and-Algorithms"
+cd Data-Structures-and-Algorithms
 ```
 
 ### 2. Выполните команду
