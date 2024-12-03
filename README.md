@@ -11,9 +11,9 @@
 Для каждой структуры данных реализованы следующие методы:
 
 - **Добавление** элемента.
-- **Получение** элемента по индексу.
-- **Обновление** данных элемента по индексу.
-- **Удаление** элемента по индексу.
+- **Получение** элемента.
+- **Обновление** данных элемента.
+- **Удаление** элемента.
 
 ### 1. Односвязный список (Linked List)
 
@@ -92,8 +92,8 @@ CircularLinkedList {
 
 ```js
 const hashTable = new HashTable();
-hashTable.add('key', 'value'); //value
-console.log(hashTable.get('key'));
+hashTable.add('key', 'value');
+console.log(hashTable.get('key')); //value
 hashTable.remove('key');
 console.log(hashTable.get('key')); //null
 ```
