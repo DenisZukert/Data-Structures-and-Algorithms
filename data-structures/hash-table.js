@@ -1,6 +1,6 @@
 class HashTable {
   constructor(size = 50) {
-    this.buckets = new Array(size).fill(null).map(() => []);
+    this.buckets = new Array(size).fill(null).map(() => new Map());
   }
 
   _hash(key) {
@@ -9,28 +9,17 @@ class HashTable {
 
   add(key, value) {
     const index = this._hash(key);
-    this.buckets[index].push({ key, value });
+    this.buckets[index].set(key, value);
   }
 
   get(key) {
     const index = this._hash(key);
-    const bucket = this.buckets[index];
-    for (let pair of bucket) {
-      if (pair.key === key) return pair.value;
-    }
-    return null;
+    return this.buckets[index].get(key) || null;
   }
 
   remove(key) {
     const index = this._hash(key);
-    const bucket = this.buckets[index];
-    for (let i = 0; i < bucket.length; i++) {
-      if (bucket[i].key === key) {
-        bucket.splice(i, 1);
-        return true;
-      }
-    }
-    return false;
+    return this.buckets[index].delete(key);
   }
 }
 

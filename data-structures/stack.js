@@ -10,6 +10,13 @@ class Stack {
   pop() {
     return this.items.pop();
   }
-}
 
+  clear() {
+    this.items = [];
+  }
+
+  size() {
+    return this.items.length;
+  }
+}
 export default Stack;

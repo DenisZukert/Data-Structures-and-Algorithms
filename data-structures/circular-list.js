@@ -25,6 +25,25 @@ class CircularLinkedList {
     }
   }
 
+  addAt(index, data) {
+    if (index === 0) {
+      this.addFirst(data);
+      return;
+    }
+
+    let current = this.head;
+    let count = 0;
+
+    while (count < index - 1 && current.next !== this.head) {
+      current = current.next;
+      count++;
+    }
+
+    const newNode = new Node(data);
+    newNode.next = current.next;
+    current.next = newNode;
+  }
+
   update(index, data) {
     if (!this.head) return false;
 
@@ -71,6 +90,16 @@ class CircularLinkedList {
     } while (current !== this.head);
 
     return false;
+  }
+
+  traverse() {
+    if (!this.head) return;
+
+    let current = this.head;
+    do {
+      console.log(current.data);
+      current = current.next;
+    } while (current !== this.head);
   }
 }
 

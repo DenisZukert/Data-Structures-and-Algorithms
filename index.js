@@ -18,6 +18,9 @@ linkedList.add(10);
 linkedList.add(20);
 linkedList.add(30);
 linkedList.update(1, 25);
+linkedList.addAt(1, 'added at');
+linkedList.addAtStart('added at start');
+linkedList.traverse();
 console.log('Односвязный список:', linkedList);
 
 // 2. Двусвязный список (DoublyLinkedList)
@@ -49,7 +52,7 @@ const stack = new Stack();
 stack.push(1);
 stack.push(2);
 stack.push(3);
-console.log('Стек:', stack);
+console.log('Стек:', stack, 'Размер: ', stack.size());
 stack.pop();
 console.log('Стек после pop:', stack);
 
@@ -58,9 +61,9 @@ const queue = new Queue();
 queue.enqueue(10);
 queue.enqueue(20);
 queue.enqueue(30);
-console.log('Очередь:', queue);
+console.log('Очередь:', queue, ' Размер: ', queue.size());
 queue.dequeue();
-console.log('Очередь после dequeue:', queue);
+console.log('Очередь после dequeue:', queue, ' Размер: ', queue.size());
 
 // ======================
 // Примеры алгоритмов сортировки
