@@ -4,7 +4,13 @@ class HashTable {
   }
 
   _hash(key) {
-    return key.toString().length % this.buckets.length;
+    const keyStr = key.toString();
+    let hash = 2166136261; // FNV offset basis
+    for (let i = 0; i < keyStr.length; i++) {
+      hash ^= keyStr.charCodeAt(i);
+      hash = (hash * 16777619) >>> 0; 
+    }
+    return hash % this.buckets.length;
   }
 
   add(key, value) {

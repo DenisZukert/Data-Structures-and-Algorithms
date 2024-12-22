@@ -52,7 +52,7 @@ const stack = new Stack();
 stack.push(1);
 stack.push(2);
 stack.push(3);
-console.log('Стек:', stack, 'Размер: ', stack.size());
+console.log('Стек:', stack, 'Размер: ', stack.size);
 stack.pop();
 console.log('Стек после pop:', stack);
 
