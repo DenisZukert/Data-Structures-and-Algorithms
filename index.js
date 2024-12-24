@@ -61,10 +61,10 @@ const queue = new Queue();
 queue.enqueue(10);
 queue.enqueue(20);
 queue.enqueue(30);
-console.log('Очередь:', queue, ' Размер: ', queue.size());
+console.log('Очередь:', queue, ' Размер: ', queue.size);
 queue.dequeue();
 queue.traverse(console.log);
-console.log('Очередь после dequeue:', queue, ' Размер: ', queue.size());
+console.log('Очередь после dequeue:', queue, ' Размер: ', queue.size);
 
 // ======================
 // Примеры алгоритмов сортировки

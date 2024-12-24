@@ -12,7 +12,7 @@ class Stack {
   }
 
   pop() {
-    if (this.isEmpty()) {
+    if (this.size === 0) {
       return null;
     }
     const value = this.list.get(0);
@@ -22,11 +22,7 @@ class Stack {
   }
 
   peek() {
-    return this.isEmpty() ? null : this.list.get(0);
-  }
-
-  isEmpty() {
-    return this.size === 0;
+    return this.size === 0 ? null : this.list.get(0);
   }
 
   clear() {
@@ -35,7 +31,7 @@ class Stack {
   }
 
   traverse(callback) {
-    if (this.isEmpty()) {
+    if (this.size === 0) {
       console.log('Стек пуст');
       return;
     }
