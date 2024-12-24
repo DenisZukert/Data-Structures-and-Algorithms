@@ -19,6 +19,10 @@ class Queue {
     return data;
   }
 
+  isEmpty() {
+    return this.size === 0;
+  }
+
   clear() {
     this.items = {};
     this.head = 0;
@@ -27,6 +31,13 @@ class Queue {
 
   size() {
     return this.tail - this.head;
+  }
+
+  traverse(callback) {
+    if (this.isEmpty()) return console.log('Очередь пуста');
+    for (let i = this.head; i < this.tail; i++) {
+      callback(this.items[i]);
+    }
   }
 }
 
